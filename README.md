@@ -60,7 +60,7 @@ Automatically adds a **Structure** tab if a PDB file is attached.
 ## 📹 Demo
 
 A demo video is available:  
-👉 [Download / Watch](./PDB%20Viewer.mp4)
+👉 [Download / Watch](./demo.mp4)
 
 *(Yes, including the demo video in GitHub is a good idea! It helps users quickly see what the plugin does.)*
 
