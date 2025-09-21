@@ -8,7 +8,8 @@
  * Author URI:  https://skogh.org
  * Text Domain: molecule-viewer
  * Domain Path: /languages
- * License:     GPL2
+ * License:     GPL-2.0-or-later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 if (!defined('ABSPATH')) exit;

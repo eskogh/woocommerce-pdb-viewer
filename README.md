@@ -213,4 +213,9 @@ define('MVWP_3DMOL_UI_URL',   'https://cdn.jsdelivr.net/npm/3dmol/build/3Dmol.ui
 - WooCommerce & Elementor glue: `includes/`
 
 PRs welcome. Please run PHP 7.4+ and WP 6.0+ locally.
-Licensed GPL‑2.0‑or‑later — © Erik Skogh.
+
+## License
+
+GPL-2.0-or-later
+
+© 2024 Erik Skogh. See the bundled `LICENSE` file or <https://www.gnu.org/licenses/gpl-2.0.html>.
