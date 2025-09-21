@@ -1,0 +1,74 @@
+/* Molecule Viewer — admin UI
+   - Card layout, dark-ish palette
+   - Compact controls for settings page
+*/
+
+#mvwp-wrap .mvwp-header { margin: 12px 0 18px; }
+#mvwp-wrap .mvwp-subtle { opacity: .75; }
+
+/* Card */
+.mvwp-card {
+  background: #0f172a; /* slate-900 */
+  color: #e5e7eb;      /* gray-200 */
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  margin: 14px 0 20px;
+}
+
+/* Grid for label / control pairs */
+.mvwp-controls-grid {
+  display: grid; grid-template-columns: 220px 1fr;
+  gap: 12px 20px; align-items: center; max-width: 900px;
+}
+.mvwp-controls-grid .desc { grid-column: 1 / span 2; opacity: .7; }
+
+/* Range pair */
+.mvwp-range-wrap { display: flex; gap: 12px; align-items: center; }
+.mvwp-range-wrap input[type=number] {
+  width: 100px; background: #0b1220; color: #e5e7eb; border: 1px solid #21304a;
+  border-radius: 10px; padding: 6px 8px;
+}
+
+/* Slider */
+.mvwp-slider {
+  -webkit-appearance: none; appearance: none;
+  width: 320px; height: 6px;
+  background: linear-gradient(90deg,#33b1ff,#7c3aed);
+  border-radius: 999px; outline: none; opacity: .95;
+}
+.mvwp-slider::-webkit-slider-thumb,
+.mvwp-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #fff; border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,.35); cursor: pointer;
+}
+
+/* Toggle switches */
+.mvwp-switch { position: relative; display: inline-block; width: 54px; height: 30px; }
+.mvwp-switch input { display:none; }
+.mvwp-slider-boolean {
+  position: absolute; cursor: pointer; inset: 0;
+  background: #1f2937; border-radius: 999px; transition: all .25s ease; border: 1px solid #293445;
+}
+.mvwp-slider-boolean:before {
+  content: ""; position: absolute; height: 22px; width: 22px; left: 4px; top: 3.5px;
+  background-color: white; border-radius: 50%; transition: all .25s ease; box-shadow: 0 2px 8px rgba(0,0,0,.35);
+}
+.mvwp-switch input:checked + .mvwp-slider-boolean { background: linear-gradient(90deg,#10b981,#60a5fa); border-color: transparent; }
+.mvwp-switch input:checked + .mvwp-slider-boolean:before { transform: translateX(24px); }
+
+/* Segmented control */
+.mvwp-segment { display: inline-flex; border: 1px solid #21304a; border-radius: 999px; overflow: hidden; }
+.mvwp-segment button { background:#0b1220; color:#cbd5e1; border:0; padding:8px 14px; cursor:pointer; }
+.mvwp-segment button.active { background:#111827; color:#fff; }
+
+/* JSON textarea */
+.mvwp-json-wrap textarea {
+  width: 100%; max-width: 900px; min-height: 140px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background:#0b1220; color:#e5e7eb; border:1px solid #21304a; border-radius:12px; padding:10px 12px;
+}
+
+/* Hide native form after our pretty UI is rendered */
+#mvwp-wrap .form-table { display:none; }
+#mvwp-wrap form > h2, #mvwp-wrap form > p.description { display: none; }
